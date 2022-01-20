@@ -15,7 +15,7 @@ class Pokemones:
         self.poder = poder
         self.devilidad = devilidad
 
-        print(f'tu pokemon es Pikachu es {tipo} con poder {poder}devil contra {devilidad}')
+        print(f'tu pokemon es Pikachu es {tipo} con poder {poder} pero devil contra {devilidad}')
 
 class Jugador:
 
@@ -27,7 +27,7 @@ class Contrincante:
 
     def __init__(self, nombre):
         self.nombre = nombre
-        print(f'listo para la batalla?')
+        print(f'lista para la batalla {nombre}?')
 
 
 class Juego:
@@ -37,3 +37,7 @@ class Juego:
 if __name__ == '__main__':
     jugador1 = Jugador
     jugador1('mary')
+    jugador2 = Contrincante
+    jugador2('laura')
+    pokemon1 = Pokemones
+    pokemon1('electrico', '6', 'agua')
