@@ -1,43 +1,27 @@
 #proyecto juego pokemon.
 
-class Pokebolas:
-
-    def __init__(self, cantidad, tipo):
-        self.cantidad = cantidad
-        self.tipo = tipo
-
-        print(f'tienes {cantidad} pokeballs {tipo}')
-
-class Pokemones:
-
-    def __init__(self, tipo, poder, devilidad):
-        self.tipo = tipo
-        self.poder = poder
-        self.devilidad = devilidad
-
-        print(f'tu pokemon es Pikachu es {tipo} con poder {poder} pero devil contra {devilidad}')
-
 class Jugador:
 
     def __init__(self, nombre):
         self.nombre = nombre
 
-        print(f'Hola {nombre} lista para la batalla?')
-class Contrincante:
 
-    def __init__(self, nombre):
+class Pokemones:
+
+    def __init__(self, nombre, tipo, poder, vida, ataque):
         self.nombre = nombre
-        print(f'lista para la batalla {nombre}?')
+        self.tipo = tipo
+        self.poder = poder
+        self.vida = vida
+        self.ataque = ataque
 
-
-class Juego:
-    def __init__(self):
-        pass
+    def mensaje(self):      
+        print(f'{self.nombre} de tipo {self.tipo}, nivel de ataque {self.poder}, vida {self.vida}, ataque {self.ataque}.')
+        
+'''def main():
+    while True:
+        pass'''
 
 if __name__ == '__main__':
-    jugador1 = Jugador
-    jugador1('mary')
-    jugador2 = Contrincante
-    jugador2('laura')
-    pokemon1 = Pokemones
-    pokemon1('electrico', '6', 'agua')
+    pokemon1 = Pokemones('Pikachu', 'Electrico', poder=8, vida=10, ataque=6)
+    pokemon1.mensaje()
